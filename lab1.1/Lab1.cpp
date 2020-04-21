@@ -1,6 +1,4 @@
-﻿// Lab1.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается выполнение программы.
-//
-#include <iostream>
+﻿#include <iostream>
 #include <stdio.h>
 #include <Windows.h>
 #include <locale.h>
