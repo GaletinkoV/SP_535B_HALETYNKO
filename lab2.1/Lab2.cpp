@@ -7,6 +7,10 @@
 
 using namespace std;
 
+#define deleteRecord "rm"
+#define modifyRecord "mf"
+#define printRecord "pr"
+
 const char FILE_NAME[] = "C:\\Users\\38099\\Desktop\\Lab2\\records.txt";
 
 void printErrors() {
@@ -182,18 +186,18 @@ void main(int argc, char* argv[])
 			initRecords(num);
 			
 			cout << "Input command" << endl;
-			cout << "rm  => delete record" << endl;
-			cout << "mf  => modify record" << endl;
-			cout << "pr  => print records" << endl;
+			cout << deleteRecord << " => delete record" << endl;
+			cout << modifyRecord << " => modify record" << endl;
+			cout << printRecord << " => print records" << endl;
 
 			scanf_s("%s", command, 3);
-			if (strcmp(command, "rm") == 0) {
+			if (strcmp(command, deleteRecord) == 0) {
 				modifyRecord(num, true);
 			}
-			else if (strcmp(command, "mf") == 0) {
+			else if (strcmp(command, modifyRecord) == 0) {
 				modifyRecord(num, false);
 			}
-			else if (strcmp(command, "pr") == 0) {
+			else if (strcmp(command, printRecord) == 0) {
 				getHeaderInfo(true);
 				getRecordsInfo(num, true);
 			}
